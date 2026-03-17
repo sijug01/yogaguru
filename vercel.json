@@ -4,15 +4,5 @@
   "installCommand": "cd frontend && npm install",
   "framework": "nextjs",
   "outputDirectory": "frontend/.next",
-  "public": "frontend/public",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ],
-  "env": {
-    "ANTHROPIC_API_KEY": "@anthropic_api_key",
-    "LLM_MODEL": "claude-haiku-4-5-20251001"
-  }
+  "rootDirectory": "frontend"
 }

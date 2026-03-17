@@ -15,7 +15,7 @@ export default function VoiceButton({ onTranscript, disabled = false }: VoiceBut
   useEffect(() => {
     // Check if browser supports Web Speech API
     const SpeechRecognition =
-      window.webkitSpeechRecognition || (window as any).SpeechRecognition;
+      (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition;
 
     if (SpeechRecognition) {
       setIsSupported(true);

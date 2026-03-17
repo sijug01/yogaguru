@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import VoiceButton from './VoiceButton';
+// import VoiceButton from './VoiceButton'; // TODO: Re-enable after fixing TypeScript issues
 
 interface InputBarProps {
   onSubmit: (message: string) => void;
@@ -50,7 +50,7 @@ export default function InputBar({ onSubmit, isLoading, onVoiceInput }: InputBar
           className="flex-1 resize-none rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[100px] max-h-[150px] disabled:bg-gray-100"
         />
         <div className="flex flex-col gap-2">
-          <VoiceButton onTranscript={handleVoiceTranscript} disabled={isLoading} />
+          {/* <VoiceButton onTranscript={handleVoiceTranscript} disabled={isLoading} /> */}
           <button
             onClick={handleSubmit}
             disabled={!input.trim() || isLoading}
